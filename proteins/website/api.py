@@ -1,5 +1,6 @@
 from django.http import HttpResponse, JsonResponse
 from website.models import *
+import json
 
 def protein_api(request, accession):
 	if UniprotKb.objects.filter(accession=accession).count() > 0:
@@ -23,7 +24,7 @@ def protein_api(request, accession):
 
 			return HttpResponse(txt, content_type="text/plain")
 		else:
-			json = {
+			json_dic = {
 				'accession': entry.accession,
 				'taxonomy': str(entry.taxonomy),
 				'gene': str(entry.gene),
@@ -32,7 +33,11 @@ def protein_api(request, accession):
 				'structures': list(map(str,pdbs))
 			}
 
-			return JsonResponse(json)
+			#json_file = json.dumps(json_dic)
+
+			
+			#return HttpResponse(json_file, content_type="application/json")
+			return JsonResponse(json_dic)
 	else:
 		return HttpResponse("Protein not found!")
 
@@ -43,10 +48,10 @@ def protein_list_api(request):
 
 	if 'from' in request.GET:
 		if int(request.GET['from']) > 0 and int(request.GET['from']) <= p_to:
-			p_from = request.GET['from']
+			p_from = int(request.GET['from'])
 	if 'to' in request.GET:
-		if int(request.GET['to']) > p_from and int(request.GET['from']) <= p_to:
-			p_to = request.GET['to']
+		if int(request.GET['to']) > p_from and int(request.GET['to']) <= p_to:
+			p_to = int(request.GET['to'])
 	if 'type' in request.GET:
 			if request.GET['type'] == 'tsv':
 				p_type = 'tsv'
