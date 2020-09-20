@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    ProteinsDB > Families
+{% endblock %}
+
+{% block content %}
+	<h1>Families</h1>
+
+	<ul>
+		{% for family in families %}
+			<li><a href="{% url 'pfam' family.pfam_id %}">{{ family }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

@@ -30,13 +30,22 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', hello),
-    path('proteins/', proteins),
-    path('protein/<accession>/', protein),
-    path('taxonomy/<ncbi_id>/', taxonomy),
-    path('gene/<gene_name>/', gene),
-    path('go/<go_id>/', go),
-    path('pfam/<pfam_id>/', pfam),
-    path('pdb/<accession>/', pdb),
+    path('filters/', test_filters),
+
+    path('proteins/', proteins, name="proteins"),
+    path('clades/', clades, name="clades"),
+    path('genes/', genes, name="genes"),
+    path('gos/', gos, name="gos"),
+    path('families/', families, name="families"),
+    path('structures/', structures, name="structures"),
+
+
+    path('protein/<accession>/', protein, name="protein"),
+    path('taxonomy/<ncbi_id>/', taxonomy, name="taxonomy"),
+    path('gene/<gene_name>/', gene, name="gene"),
+    path('go/<go_id>/', go, name="go"),
+    path('pfam/<pfam_id>/', pfam, name="pfam"),
+    path('pdb/<accession>/', pdb, name="pdb"),
 
     path('api/protein/<accession>/', protein_api),
     path('api/proteins/', protein_list_api),    

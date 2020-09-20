@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    ProteinsDB > {{ go }}
+{% endblock %}
+
+{% block content %}
+	<h1>{{go}}</h1>
+
+	<b>Name:</b> {{go.name}}<br>
+	<b>Type:</b> {{go.get_go_type_display}}<br>
+	<b>Description:</b> {{go.description}}<br>
+
+	<h2>Proteins</h2>
+	<ul>
+		{% for protein in proteins %}
+			<li><a href="{% url 'protein' protein.accession %}">{{ protein }}</a></li>
+		{% endfor %}
+	</ul>
+	
+{% endblock %}

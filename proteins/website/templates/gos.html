@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    ProteinsDB > Gene Ontologies
+{% endblock %}
+
+{% block content %}
+	<h1>Gene Ontologies</h1>
+
+	<ul>
+		{% for go in gos %}
+			<li><a href="{% url 'go' go.go_id %}">{{ go }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

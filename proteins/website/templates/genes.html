@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    ProteinsDB > Genes
+{% endblock %}
+
+{% block content %}
+	<h1>Genes</h1>
+
+	<ul>
+		{% for gene in genes %}
+			<li><a href="{% url 'gene' gene %}">{{ gene }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

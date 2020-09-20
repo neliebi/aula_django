@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    ProteinsDB > Clades
+{% endblock %}
+
+{% block content %}
+	<h1>Clades</h1>
+
+	<ul>
+		{% for clade in clades %}
+			<li><a href="{% url 'taxonomy' clade.ncbi_id %}">{{ clade }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

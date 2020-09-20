@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    ProteinsDB > {{ entry.accession }}
+{% endblock %}
+
+{% block content %}
+	<h1>{{entry.accession}}</h1>
+
+	<p style="overflow-wrap: break-word;">{{entry.sequence}}</p>
+
+	<b>Taxonomy:</b> <a href='{% url 'taxonomy' entry.taxonomy.ncbi_id %}'>{{entry.taxonomy}}</a><br>
+	<b>Gene:</b> <a href='{% url 'gene' entry.gene.name %}'>{{entry.gene}}</a><br>
+
+	<h2>Gene Ontology</h2>
+	<ul>
+		{% for go in entry.gos.all %}
+			<li><a href="{% url 'go' go.go_id %}">{{ go }}</a></li>
+		{% endfor %}
+	</ul>
+
+	<h2>Families</h2>
+	<ul>
+		{% for pfam in entry.pfam.all %}
+			<li><a href="{% url 'pfam' pfam.pfam_id %}">{{ pfam }}</a></li>
+		{% endfor %}
+	</ul>
+
+	<h2>Structures</h2>
+	<ul>
+		{% for pdb in pdbs %}
+			<li><a href="{% url 'pdb' pdb.accession %}">{{ pdb }}</a></li>
+		{% endfor %}
+	</ul>
+	
+{% endblock %}

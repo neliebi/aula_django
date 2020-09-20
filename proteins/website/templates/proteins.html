@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    ProteinsDB > Proteins
+{% endblock %}
+
+{% block content %}
+	<h1>Proteins</h1>
+
+	<ul>
+		{% for protein in proteins %}
+			<li><a href="{% url 'protein' protein %}">{{ protein }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

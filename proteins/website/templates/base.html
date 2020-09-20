@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href={% static 'style.css' %}>
+	</head>
+	<body>
+		<header>
+			<span id="title">ProteinsDB</span>
+  			<p>The protein database to learn Django</p>
+		</header>
+		{% include 'base/menu.html' %}
+
+		<main>
+		<div id="content">
+			{% block content %}
+        	{% endblock %}
+		</div>
+		</main>
+	</body>
+</html>
+
+

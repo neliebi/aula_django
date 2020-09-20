@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    ProteinsDB > Structures
+{% endblock %}
+
+{% block content %}
+	<h1>Structures</h1>
+
+	<ul>
+		{% for pdb in structures %}
+			<li><a href="{% url 'pdb' pdb.accession %}">{{ pdb }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}
