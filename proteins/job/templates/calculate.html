@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    ProteinsDB > Calculate
+{% endblock %}
+
+{% block content %}
+	<h1>Calculate</h1>
+
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<label for="myfile">File</label>
+		<input type="file" id="myfile" name="myfile"><br>
+		<button type="submit">Calculate</button>
+	</form>
+{% endblock %}

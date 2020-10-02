@@ -1,10 +1,7 @@
-
 from django.shortcuts import render
 
 from django.http import HttpResponse
 from website.models import *
-
-from django.shortcuts import render
 
 def hello(request):
 	proteins = UniprotKb.objects.all()
@@ -29,7 +26,6 @@ def test_filters(request):
 	}
 	
 	return render(request,'filters.html',context)
-
 
 def proteins(request):
 	proteins = UniprotKb.objects.all()

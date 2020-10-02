@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'website'
+    'website',
+    'job'
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+
+#ACTIVEMQ BROKER
+ACTIVEMQ_USER = "admin"
+ACTIVEMQ_PASW = "admin"
+ACTIVEMQ_HOST = "localhost"
+ACTIVEMQ_PORT = 61613
+ACTIVEMQ_DEST = "/queue/test"
