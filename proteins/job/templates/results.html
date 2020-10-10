@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Proteins > Results
+{% endblock %}
+
+{% block head %}
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+{% endblock %}
+
+{% block content %}
+	<h1>Results</h1>
+
+	<h2>{{ job.job_id }}</h2>
+
+	<div id="result">
+		{% if job.status == -1 %}
+			<p>Job failed!</p>
+		{% elif job.status == 0 %}
+			<p>Your job is queued. Number #{{position}}</p>
+		{% elif job.status == 1 %}
+			<p>Filtering the dataset...</p>
+		{% elif job.status == 2 %}
+			<p>Training the dataset...</p>
+		{% elif job.status == 3 %}
+			<p>Running classification...</p>
+		{% elif job.status == 10 %}
+			<p>SHOW RESULTS</p>
+		{% endif %}
+
+		{% if job.status > -1 and job.status < 10 %}
+			<script type="text/javascript">
+			    setInterval("my_function();",1000); 
+			    function my_function(){
+			        $('#result').load(location.href + ' #result');
+			    }
+			</script>
+		{% endif %}
+	</div>
+{% endblock %}

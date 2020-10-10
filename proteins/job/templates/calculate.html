@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Proteins > Calculate
+{% endblock %}
+
+{% block content %}
+	<h1>Calculate</h1>
+
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+
+		<select name="select">
+			<option value="1">Opt 1</option>
+			<option value="2">Opt 2</option>
+			<option value="3">Opt 3</option>
+		</select>
+
+		<label for="myfile">File</label>
+		<input type="file" id="myfile" name="myfile"/>
+
+		<button type="submit">Calculate</button>
+	</form>
+{% endblock %}

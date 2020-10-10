@@ -18,6 +18,7 @@ from django.urls import path
 
 from website.views import *
 from website.api import *
+from job.views import *
 
 
 #handlerXXX = 'app_name.views_file.view_function'
@@ -28,6 +29,9 @@ handler500 = 'website.views.error500'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('calculate/',calculate, name="calculate"),
+    path('results/<job_id>', results, name="results"),
 
     path('', hello),
     path('filters/', test_filters),
