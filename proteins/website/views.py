@@ -5,6 +5,32 @@ from django.http import HttpResponse
 from website.models import *
 
 from django.shortcuts import render
+from proteins.settings import SOLR_ROOT
+from pysolr import Solr
+
+def search(request):
+	context = {}
+	query = "*"
+	rows = 10
+	start = 0
+
+	facet_params = {
+        'facet': 'on',
+        'facet.field': ['protein_name_ft','organism_name_ft', 'gene_name_ft', 'pfam_ft'],
+        'facet.mincount': 1
+    }
+
+	if 'q' in request.GET:
+		query = request.GET['q']
+
+	solr = Solr(SOLR_ROOT, results_cls=dict)
+	results = solr.search(q=query, **facet_params)
+
+	context['results'] = results['response']['docs']
+	context['facets'] = results['facet_counts']['facet_fields']
+	context['query'] = query + " AND " if query != "*" else ""
+
+	return render(request,'search.html',context)
 
 def hello(request):
 	proteins = UniprotKb.objects.all()

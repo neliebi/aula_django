@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
-    'job'
+    'job',
+    'test_models'
 ]
 
 MIDDLEWARE = [
@@ -130,4 +131,7 @@ ACTIVEMQ_PASW = "admin"
 ACTIVEMQ_HOST = "localhost"
 ACTIVEMQ_PORT = "61613"
 ACTIVEMQ_DEST = "/queue/test"
+
+#SOLR
+SOLR_ROOT = "http://localhost:8983/solr/proteins"
 

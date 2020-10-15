@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% load filters %}
+
+{% block title %}
+    ProteinsDB > Clades
+{% endblock %}
+
+{% block content %}
+	<h1>Filtros</h1>
+
+	<div id="filters" style="text-align: center;">
+		{% if facets.protein_name_ft|length > 0 %}
+			<div id="protein" class="filter">
+				<h3>Protein</h3>
+				<ul>
+					{% for protein, count in facets.protein_name_ft|pairs %}
+						<li><a href='/search/?q={{query}}"{{protein}}"'>{{protein}} [{{count}}]</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+
+		{% if facets.organism_name_ft|length > 0 %}
+			<div id="organism" class="filter">
+				<h3>Organism</h3>
+				<ul>
+					{% for organism, count in facets.organism_name_ft|pairs %}
+						<li><a href='/search/?q={{query}}"{{organism}}"'>{{organism}} [{{count}}]</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+
+		{% if facets.gene_name_ft|length > 0 %}
+			<div id="gene" class="filter">
+				<h3>Gene</h3>
+				<ul>
+					{% for gene, count in facets.gene_name_ft|pairs %}
+						<li><a href='/search/?q={{query}}"{{gene}}"'>{{gene}} [{{count}}]</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+
+		{% if facets.pfam_ft|length > 0 %}
+			<div id="protein" class="filter">
+				<h3>Pfam</h3>
+				<ul>
+					{% for pfam, count in facets.pfam_ft|pairs %}
+						<li><a href='/search/?q={{query}}"{{pfam}}"'>{{pfam}} [{{count}}]</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+	</div>
+
+	<h1>Search Results</h1>
+
+	{% for entry in results %}
+		<div style="margin: 2.5%; padding: 2.5%;">
+			<a href="{% url 'protein' entry.id %}"><h2>{{entry.id}}</h2></a>
+
+			<b>Entry name:</b> {{entry.entry}}<br>
+			
+			<b>Organism:</b>
+			{% for name in entry.organism_name %}
+				{% if forloop.counter == 1 %}
+					{{name|capfirst}}
+				{% else %}
+					({{name|capfirst}})
+				{% endif %}
+			{% endfor%}<br>
+
+			<b>Protein names:</b>
+			{% for name in entry.protein_name %}
+				{% if forloop.counter == 1 %}
+					{{name|capfirst}}
+				{% else %}
+					({{name|capfirst}})
+				{% endif %}
+			{% endfor%}<br>
+
+			<b>Genes:</b>
+			{% for name in entry.gene_name %}
+				{% if forloop.counter == 1 %}
+					{{name|capfirst}}
+				{% else %}
+					({{name|capfirst}})
+				{% endif %}
+			{% endfor%}<br><br>
+
+			{% if entry.pfam|length > 0 %}
+				<b>Pfam:</b>
+				{{entry.pfam|join:", "}}<br>
+			{% endif %}
+
+			{% if entry.pdb|length > 0 %}
+				<b>PDB:</b>
+				{{entry.pdb|join:", "}}
+			{% endif %}
+		</div>
+	{% endfor %}
+{% endblock %}
+
+
