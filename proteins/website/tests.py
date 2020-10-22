@@ -9,7 +9,7 @@ from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 import time, os, socket
 from datetime import datetime
 
-#Test
+#Test2
 
 class GUITest(StaticLiveServerTestCase):
 	host = "127.0.0.1"
