@@ -9,6 +9,8 @@ from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 import time, os, socket
 from datetime import datetime
 
+#Test
+
 class GUITest(StaticLiveServerTestCase):
 	host = "127.0.0.1"
 	port = 8000
