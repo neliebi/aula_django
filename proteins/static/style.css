@@ -66,3 +66,10 @@ main{
 .footer_elements{
 	display: inline-block;
 }
+.filter{
+	height: 300px;
+	width: 250px;
+	overflow-y: scroll;
+	text-align: left;
+	display: inline-block;
+}

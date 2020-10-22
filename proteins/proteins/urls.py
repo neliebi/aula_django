@@ -33,6 +33,8 @@ urlpatterns = [
     path('calculate/',calculate, name="calculate"),
     path('results/<job_id>/',results, name="results"),
 
+    path('search/',search, name="search"),
+
     path('', hello),
     path('filters/', test_filters),
 

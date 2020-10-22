@@ -12,6 +12,10 @@
 		<header>
 			<span id="title">ProteinsDB</span>
   			<p>The protein database to learn Django</p>
+
+  			<form action="/search/" method="get">
+  				<input type="text" name="q" placeholder="Search..." style="height: 30px; width: 30%">
+  			</form>
 		</header>
 		{% include 'base/menu.html' %}
 

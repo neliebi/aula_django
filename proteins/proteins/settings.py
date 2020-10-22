@@ -131,3 +131,5 @@ ACTIVEMQ_PASW = "admin"
 ACTIVEMQ_HOST = "localhost"
 ACTIVEMQ_PORT = 61613
 ACTIVEMQ_DEST = "/queue/test"
+
+SOLR_ROOT = "http://localhost:8983/solr/proteins2"
