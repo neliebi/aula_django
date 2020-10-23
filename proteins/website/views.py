@@ -8,6 +8,9 @@ from django.shortcuts import render
 from proteins.settings import SOLR_ROOT
 from pysolr import Solr
 
+def getHumanProteins():
+	return UniprotKb.objects.filter(taxonomy__ncbi_id=9606)
+
 def search(request):
 	context = {}
 	query = "*"

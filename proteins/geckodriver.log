@@ -1,0 +1,55 @@
+1603483052505	geckodriver	INFO	Listening on 127.0.0.1:61655
+1603483053383	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/nr/8s0mtq0n6h13l27gkj16rj6mq1342l/T/rust_mozprofilesEQqgW"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603483064631	Marionette	INFO	Listening on port 61672
+1603483064708	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+1603483096361	Marionette	INFO	Stopped listening on port 61672
+1603483147127	geckodriver	INFO	Listening on 127.0.0.1:62228
+1603483148138	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/nr/8s0mtq0n6h13l27gkj16rj6mq1342l/T/rust_mozprofiletPFLQr"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603483156212	Marionette	INFO	Listening on port 62239
+1603483156297	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+1603483160604	Marionette	INFO	Stopped listening on port 62239
+1603483196926	geckodriver	INFO	Listening on 127.0.0.1:62566
+1603483197937	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/nr/8s0mtq0n6h13l27gkj16rj6mq1342l/T/rust_mozprofileJdYff7"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603483206392	Marionette	INFO	Listening on port 62579
+1603483206403	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+1603483210770	Marionette	INFO	Stopped listening on port 62579
+1603483599268	geckodriver	INFO	Listening on 127.0.0.1:64376
+1603483600281	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/nr/8s0mtq0n6h13l27gkj16rj6mq1342l/T/rust_mozprofileFhxVqH"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603483608351	Marionette	INFO	Listening on port 64387
+1603483608449	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+1603483609864	Marionette	INFO	Stopped listening on port 64387
+1603483641050	geckodriver	INFO	Listening on 127.0.0.1:64681
+1603483642063	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/nr/8s0mtq0n6h13l27gkj16rj6mq1342l/T/rust_mozprofileHlqVKI"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603483650296	Marionette	INFO	Listening on port 64693
+1603483650319	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+1603483651575	Marionette	INFO	Stopped listening on port 64693
+1603484100769	geckodriver	INFO	Listening on 127.0.0.1:50351
+1603484101781	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/nr/8s0mtq0n6h13l27gkj16rj6mq1342l/T/rust_mozprofileatodGK"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603484108472	Marionette	INFO	Listening on port 50362
+1603484108485	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+1603484109708	Marionette	INFO	Stopped listening on port 50362
+1603484299055	geckodriver	INFO	Listening on 127.0.0.1:51305
+1603484300066	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/nr/8s0mtq0n6h13l27gkj16rj6mq1342l/T/rust_mozprofilel2tMQ2"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1603484307638	Marionette	INFO	Listening on port 51318
+1603484307718	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 281: NS_ERROR_FAILURE: Should pass a non-null uri
+1603484309363	Marionette	INFO	Stopped listening on port 51318
