@@ -78,7 +78,7 @@ class GUITest(StaticLiveServerTestCase):
 
 		try:
 			title = content.find_element_by_tag_name("h1")
-			self.assertEqual("nomeErrado",title.text)
+			self.assertEqual("P11111",title.text)
 
 			sequence = content.find_elements_by_tag_name("p")[0]
 			self.assertEqual(sequence.text,"AAAA")
